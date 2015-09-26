@@ -1,0 +1,289 @@
+/*normalize the css, this turns off the standard viewship of browers*/
+html{
+	height:100%;
+	width:100%;
+}
+body{
+	height:100%;
+	width:100%;
+	color:white;
+	font-family: 'Amaranth', sans-serif;
+	background:black url("../images/background1.jpg");
+	background-size:cover;
+}	
+
+#main{
+	text-align: center;
+}
+
+p{
+	font-size: 25px;
+}
+
+
+#bioParagraph{
+	margin:10px auto;
+	max-width: 1000px;
+	padding: 0px 10px;
+	/*margin: 10px 130px;*/
+}
+
+#mainHeaderIndex{
+font-size:48px;
+}
+
+
+/* Index Page funtionality START*/
+
+.indexAnchorFont{
+	color:white;
+	transition: all .3s ease-in-out; /* creates smooth transiton effect*/
+	padding:10px;
+}
+a:hover { /* Or use>> .tabs a:hover */
+   text-decoration:none;
+}
+h2{
+	 color:#FFC863;
+}
+#contactInfo{
+	padding-top:50px;
+}
+.indexAnchorFont:hover{
+	font-weight: bold;
+   	color:white;
+   	transform: scale(1.1); /* enlarged effect*/
+   	text-shadow:15px 10px 2px #FABC4C;
+}
+#facebookIconContact:hover{
+   	transform: scale(1.1); /* enlarged effect*/
+   	transition: all .3s ease-in-out;
+   	box-shadow: 0px 0px 10px 1px #FABC4C;
+}
+/* Index Page funtionality END*/
+
+
+
+/* Navbar START*/
+.navbar{
+	text-align: center;
+}
+.navbarFont{
+	font-size: 26px;
+}
+.nav>li {
+	float: none;
+	display: inline-block;
+}
+.navbar-nav {
+    float: none;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #D3D2D2;
+}
+.navbar-inverse .navbar-nav>li>a:focus, 
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #FABC4C;
+}
+
+/* Navbar END*/
+
+
+
+/* Images START */
+
+.moon{				/*index page top Lft-Right*/
+	height:45px;
+	width:35px;
+	padding-bottom:10px;
+}
+.moonMobile{
+	height:45px;
+	width:35px;
+	padding-bottom:10px;
+}
+
+.darkerMoon{		/*navbar Lft-Right */
+	height:40px;
+	width:40px;
+	margin-top:5px;
+	margin-bottom: 8px;
+}
+.imagesGalleryLanding{
+	height:250px;
+	width:205px;
+}
+.img-responsive{
+	margin:0 auto;
+	height:250px;
+}
+#bioKing{
+	width:589px;
+	height:395px;
+}
+
+#facebookIconContact{
+	width:50px;
+	height:50px;
+	border-radius: 10%;
+}
+#frame{
+	height:325px;
+	width:250px;
+}
+/* Images END*/
+
+
+/* Gallery Pages - Image Gallery - Click image - title info "Buy This ArtWork" */
+.emailLink{
+	/*color:#F6DC7A;*/
+	color:#92BBE5;
+}
+.emailLink:hover{
+	color:#FABC4C;
+}
+
+
+/* image gallery functionality START */
+#galleryImages li:hover {
+	transform: scale(1.1); /* enlarged effect*/
+	transition: all .3s ease-in-out;
+	box-shadow: 0px 0px 10px 1px #FABC4C;
+}
+/* image gallery functionality END */
+
+.imageGallery img{
+	width:100px;
+}
+
+.imageGallery h1 {
+	color: #fff;
+	text-align: center;
+}
+
+.imageGallery ul {
+	list-style:none;
+	margin: 0 auto;
+	padding: 0;
+	display: block;
+	max-width: 780px;
+	text-align: center;
+}
+.imageGallery ul li {
+	display: inline-block;
+	padding: 8px;
+	background:black;
+	margin:10px;
+}
+.imageGallery a{
+	text-decoration: none;
+}
+
+/* Gallery - Img clicked - Modal */
+#overlay {
+  background:rgba(0,0,0,0.8);
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  display:none;
+  text-align:center;
+
+}
+#overlay img {
+ margin-top: 3%;
+ height:85%; 
+
+}
+#overlay p {
+ color:white;
+}
+
+
+/* Media Queries START */
+@media (max-width:550px){
+	#indexTitleOf{display:block;} /* Index Page 'Of' for mobile */
+	.moon{display:none;} /* Index Page white moon off under 550, for mobile */
+}
+
+@media(min-width:551px){
+	.moonMobile{display:none;} /* moonMobile on under 550 */
+	.moonMobile{display:none;} /* moonMobile on under 550 */
+}
+
+/* Index Page dark moon in NavBar cancels, for mobile */
+@media(max-width:567px){
+	.darkerMoon{display:none;}
+}
+@media(){}
+
+@media (min-width: 1200px){
+	.galleryLandingContainer{width: 970px;}
+}
+@media(max-width:385px){
+	#mainHeaderIndex{font-size:40px;}
+	#subtitle{font-size:20px;} /* Index - Artist Craig ... - Mobile */
+	#indexSubTitle{display:block;} /* Index - Artist Craig ... - Mobile */
+}
+@media(min-width:335px){
+	#subtitle{font-size:25px;}
+}
+@media(max-width:600px){	/* bio pictures */
+	#bioKing{width:400px;
+			height:300px;
+		}
+}
+@media(max-width:400px){	/* bio pictures */
+	#bioKing{width:315px;
+			 height:280px;
+	}
+	#bioParagraph{font-size: 20px;}
+
+	
+}
+@media(max-width:440px){
+	#overlay img{width:95%;}
+	#overlay p{font-size:20px;} /* painting captions */
+}
+
+@media(max-width:400px){ /* painting modal for mobile*/
+	#overlay img {
+	    margin-top: 15%;
+	    height: 75%;
+	}
+	#landscapeFormatMobile{height:50%;}
+	
+}
+
+@media(max-width:350px){ /* painting modal for mobile */
+	#overlay img {
+	    margin-top: 20%;
+	    height: 65%;
+	}
+}
+
+/* Media Queries END */
+
+
+
+
+
+
+
+/* used with lazy loader */
+img{
+	background:black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
