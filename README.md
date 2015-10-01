@@ -1,0 +1,1 @@
+A responsive website which showcase the artwork of  21st century painter ‘King’, formatted to render in Chrome, FireFox, IE, Safari and Opera browsers.  HTML5/ CSS3/ Bootstrap/ JavaScript/ jQuery are used.
