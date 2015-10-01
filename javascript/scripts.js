@@ -9,8 +9,9 @@ $(document).ready(function() {
     var $image = $("<img>");
     var $caption = $("<p></p>");
 
-    //An image to overlay
+    //An container to overlay
     $overlay.append($image);
+    //An image to container
 
     //A caption to overlay
     $overlay.append($caption);
@@ -42,9 +43,6 @@ $(document).ready(function() {
     });
 
 
-
-
-
     //When overlay is clicked
     $overlay.click(function(){
       //Hide the overlay
@@ -56,3 +54,4 @@ $(document).ready(function() {
       
 
 });
+

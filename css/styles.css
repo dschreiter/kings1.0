@@ -11,7 +11,9 @@ body{
 	background:black url("../images/background1.jpg");
 	background-size:cover;
 }	
-
+.galleryPages{ /*body tag of gallery pages*/
+padding-top: 70px;
+}
 #main{
 	text-align: center;
 }
@@ -37,7 +39,12 @@ font-size:48px;
 
 .indexAnchorFont{
 	color:white;
+	text-shadow:2px 2px 2px #FABC4C;
 	transition: all .3s ease-in-out; /* creates smooth transiton effect*/
+		-ms-transform:  all .3s ease-in-out;
+		-webkit-transform:  all .3s ease-in-out;
+		-moz-transform:  all .3s ease-in-out;
+		-o-transform:  all .3s ease-in-out;
 	padding:10px;
 }
 a:hover { /* Or use>> .tabs a:hover */
@@ -53,11 +60,24 @@ h2{
 	font-weight: bold;
    	color:white;
    	transform: scale(1.1); /* enlarged effect*/
+   	   	-ms-transform: scale(1.1); 
+		-webkit-transform: scale(1.1);
+		-moz-transform: scale(1.1);
+		-o-transform: scale(1.1);
    	text-shadow:15px 10px 2px #FABC4C;
 }
 #facebookIconContact:hover{
    	transform: scale(1.1); /* enlarged effect*/
+   		-ms-transform:  scale(1.1); 
+		-webkit-transform:  scale(1.1); 
+		-moz-transform:  scale(1.1);
+		-o-transform:  scale(1.1); 
+
    	transition: all .3s ease-in-out;
+   		-ms-transform:  all .3s ease-in-out;
+		-webkit-transform:  all .3s ease-in-out;
+		-moz-transform:  all .3s ease-in-out;
+		-o-transform:  all .3s ease-in-out;
    	box-shadow: 0px 0px 10px 1px #FABC4C;
 }
 /* Index Page funtionality END*/
@@ -119,7 +139,7 @@ h2{
 }
 #bioKing{
 	width:589px;
-	height:395px;
+	height:434px;
 }
 
 #facebookIconContact{
@@ -143,12 +163,21 @@ h2{
 	color:#FABC4C;
 }
 
-
 /* image gallery functionality START */
 #galleryImages li:hover {
 	transform: scale(1.1); /* enlarged effect*/
+		-ms-transform: scale(1.1); /* enlarged effect*/
+		-webkit-transform: scale(1.1); /* enlarged effect*/
+		-moz-transform: scale(1.1); /* enlarged effect*/
+		-o-transform: scale(1.1); /* enlarged effect*/
+	
 	transition: all .3s ease-in-out;
+		-ms-transform:  all .3s ease-in-out;
+		-webkit-transform:  all .3s ease-in-out;
+		-moz-transform:  all .3s ease-in-out;
+		-o-transform:  all .3s ease-in-out;
 	box-shadow: 0px 0px 10px 1px #FABC4C;
+		-webkit-box-shadow:0px 0px 10px 1px #FABC4C;
 }
 /* image gallery functionality END */
 
@@ -189,13 +218,15 @@ h2{
   left:0;
   display:none;
   text-align:center;
+  z-index: 2000;    /* layers pushing back navbar*/
+  cursor: pointer;
 
 }
 #overlay img {
- margin-top: 3%;
- height:85%; 
-
+ margin-top: 30px;
+ max-width:80%;
 }
+
 #overlay p {
  color:white;
 }
@@ -212,8 +243,8 @@ h2{
 	.moonMobile{display:none;} /* moonMobile on under 550 */
 }
 
-/* Index Page dark moon in NavBar cancels, for mobile */
-@media(max-width:567px){
+
+@media(max-width:567px){	/* Index Page dark moon in NavBar cancels, for mobile */
 	.darkerMoon{display:none;}
 }
 @media(){}
@@ -238,37 +269,29 @@ h2{
 	#bioKing{width:315px;
 			 height:280px;
 	}
-	#bioParagraph{font-size: 20px;}
+	#bioParagraph{font-size: 20px;}	
 
-	
-}
-@media(max-width:440px){
-	#overlay img{width:95%;}
-	#overlay p{font-size:20px;} /* painting captions */
-}
-
-@media(max-width:400px){ /* painting modal for mobile*/
-	#overlay img {
-	    margin-top: 15%;
-	    height: 75%;
-	}
+	/* painting modal for mobile*/
+	#overlay img {margin-top: 20px;} 
 	#landscapeFormatMobile{height:50%;}
-	
+	#overlay p{font-size:14px;} /* painting captions */
+}
+@media(min-width:495px){
+	#overlay img{height:85%;} /*major change */
+}
+
+@media(max-width:440px){			/*smaller than 440*/
+	#overlay img{width:90%;
+				height: none;}  	/* overlay major change*/
+	#overlay p{font-size:20px;} 	/* painting captions */
 }
 
 @media(max-width:350px){ /* painting modal for mobile */
-	#overlay img {
-	    margin-top: 20%;
-	    height: 65%;
-	}
+	#overlay img {margin-top: 15px;}
+	#overlay p{font-size:12px;} /* painting captions */
 }
 
 /* Media Queries END */
-
-
-
-
-
 
 
 /* used with lazy loader */
@@ -276,10 +299,10 @@ img{
 	background:black;
 }
 
-
-
-
-
+#clickToClose{
+	font-size: 12px
+	color:#FABC4C;
+}
 
 
 
